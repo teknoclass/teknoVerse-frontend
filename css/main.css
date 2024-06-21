@@ -7,32 +7,63 @@
     --primary-color-50: #F64DD180;
     --primary-color-25: #F64DD140;
     --second-color: #0BE7F7;
-    --fourth-color: #004384;
+    --third-color: #27ADE3;
+    --fourth-color: #002D84;
     --fourth-color-75: #002D84BF;
     --basic-dark: #2C2C2C;
     --basic-dark-50: #2C2C2C80;
     --basic-dark-75: #2C2C2CBF;
     --basic-light: #FEFEFE;
     --basic-light-75: #FEFEFEBF;
+    --section-padding: 60px;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
     font-family: "Almarai", sans-serif;
 }
+
+/* Start Color */
+.text-color-primary {
+    color: var(--primary-color);
+}
+
+.text-color-second {
+    color: var(--second-color);
+}
+
+.text-color-third {
+    color: var(--third-color);
+}
+
+.text-color-fourth {
+    color: var(--fourth-color);
+}
+
+.text-color-dark-50 {
+    color: var(--basic-dark-50);
+}
+
+/* End Color */
 /* Start Background */
-.basic-light-75{
+.basic-light-75 {
     background-color: var(--basic-light-75);
 }
+
 /* End Background */
 /* Start Shadow */
-.primary-shadow{
+.primary-shadow {
     box-shadow: 0px 2px 8px 0px var(--primary-color-25);
     -moz-box-shadow: 0px 2px 8px 0px var(--primary-color-25);
     -o-box-shadow: 0px 2px 8px 0px var(--primary-color-25);
     -ms-box-shadow: 0px 2px 8px 0px var(--primary-color-25);
     -webkit-box-shadow: 0px 2px 8px 0px var(--primary-color-25);
 }
-.sticky{
+
+.sticky {
     position: fixed;
     top: 0;
     left: 0;
@@ -40,12 +71,13 @@ body {
     z-index: 999;
     animation: sticky 1s
 }
+
 /* End Shadow */
 /* Start Ready Button */
 .primary-btn,
 .fourth-btn,
 .basic-light-btn {
-    padding: 0.8em 1.7em;
+    padding: 0.8em 1.2em;
     background-color: transparent;
     border-radius: 12px;
     position: relative;
@@ -58,17 +90,21 @@ body {
     text-transform: uppercase;
     z-index: 1;
 }
-.primary-btn{
+
+.primary-btn {
     color: var(--primary-color);
 }
+
 .basic-light-btn {
     color: var(--basic-light);
 }
-.fourth-btn{
+
+.fourth-btn {
     color: var(--basic-light);
     background-color: var(--fourth-color);
     border: none;
 }
+
 .primary-btn::before,
 .primary-btn::after,
 .fourth-btn::before,
@@ -90,10 +126,12 @@ body {
 .primary-btn::after {
     background-color: var(--primary-color);
 }
+
 .fourth-btn::before,
 .fourth-btn::after {
     background-color: var(--primary-color);
 }
+
 .basic-light-btn::before,
 .basic-light-btn::after {
     background-color: var(--basic-light);
@@ -119,16 +157,18 @@ body {
 .fourth-btn:hover::after,
 .basic-light-btn:hover::before,
 .basic-light-btn:hover::after {
-    height: 210px;
-    width: 210px;
+    height: 510px;
+    width: 510px;
 }
 
 .primary-btn:hover {
     color: var(--basic-light);
 }
-.basic-light-btn:hover{
+
+.basic-light-btn:hover {
     color: var(--basic-dark);
 }
+
 .primary-btn:active,
 .fourth-btn:active,
 .basic-light-btn:active {
@@ -136,37 +176,170 @@ body {
 }
 
 /* ENd Ready Button */
+/* Start */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-wrapper #main-content {
+    flex: 1 1 0;
+}
+
+/* End */
 /* Start Header */
-header{
+header {
     padding: 10px 0px;
     background-color: var(--basic-light-75);
     border-radius: 0px 0px 80px 80px;
 }
-header nav .navbar-brand img{
+
+header nav .navbar-brand img {
     width: 180px;
     height: 50px;
     object-fit: contain;
 }
-header nav ul.navbar-nav .nav-item .nav-link{
+
+header nav ul.navbar-nav .nav-item .nav-link {
+    font-weight: 500;
     color: var(--basic-dark);
     text-align: center;
 }
-header nav .sign-btn{
-    box-shadow: 0px 5px 0px var(--primary-color-50);
+
+header nav .sign-btn,
+#sign-page .sign-box .sign-btn {
+    box-shadow: 0px 5px 0px var(--primary-color);
     border-color: transparent;
     transition: all .3s linear;
 }
-header nav .sign-btn:hover{
+
+header nav .sign-btn:hover,
+#sign-page .sign-box .sign-btn:hover {
     box-shadow: 0 0;
 }
+
 /* End Header */
+/* Start Vesrions */
+#vesrions {
+    background-color: var(--basic-light-75);
+    border-radius: 80px 80px 0px 0px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#vesrions .mobile-ver,
+#vesrions .vr-ver,
+#vesrions .desktop-ver {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+#vesrions .desktop-ver {
+    padding: 0px 10px;
+    border-inline-end: 1px solid var(--fourth-color);
+}
+#vesrions .mobile-ver{
+    padding: 0px 10px;
+    border-inline-start: 1px solid var(--fourth-color);
+}
+
+/* End Vesrions */
+/* Start Footer */
+footer{
+    background-color: #fff;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+footer ul.social-media{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+/* End Footer */
+/* Start Sign In Page */
+#sign-page {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../image/login-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70dvh;
+}
+
+#sign-page .sign-box {
+    margin: auto;
+    background-color: #FEFEFE1F;
+    border-radius: 40px;
+    border: 1px solid var(--third-color);
+    max-width: 550px;
+}
+
+#sign-page .sign-box .content {
+    border-radius: 40px;
+    padding: 40px;
+}
+
+#sign-page .sign-box .content form input {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    border: none;
+    outline: 0;
+}
+
+#sign-page .sign-box .content form input:focus {
+    outline: 0;
+}
+
+#sign-page .sign-box .content form input::placeholder {
+    color: var(--basic-dark-50);
+    text-align: right;
+}
+
+#sign-page .sign-box .content .pass-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+#sign-page .sign-box .content .pass-input .pass-icon {
+    cursor: pointer;
+    user-select: none;
+    transition: all .5s ease-out;
+}
+
+#sign-page .sign-box .content .pass-input input {
+    border: none;
+    outline: 0;
+    flex: 1 1 0;
+}
+
+/* End Sign In Page */
 /* Start Animation KeyFrames */
 @keyframes sticky {
-    0%{
+    0% {
         transform: translateY(-100%);
     }
-    100%{
+
+    100% {
         transform: translateY(0%);
     }
 }
+
 /* End Animation KeyFrames */
