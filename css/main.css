@@ -191,7 +191,7 @@ body {
 header {
     padding: 10px 0px;
     background-color: var(--basic-light-75);
-    border-radius: 0px 0px 80px 80px;
+    border-radius: 0px 0px 40px 40px;
 }
 
 header nav .navbar-brand img {
@@ -223,18 +223,14 @@ header nav .sign-btn:hover,
 #vesrions {
     background-color: var(--basic-light-75);
     border-radius: 80px 80px 0px 0px;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 900px;
+    padding: 15px 10px;
     margin: auto;
     position: fixed;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 55;
+    width: 90%;
 }
 
 #vesrions .mobile-ver,
@@ -243,37 +239,82 @@ header nav .sign-btn:hover,
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
 }
-#vesrions .desktop-ver {
-    padding: 0px 10px;
-    border-inline-end: 1px solid var(--fourth-color);
-}
-#vesrions .mobile-ver{
-    padding: 0px 10px;
-    border-inline-start: 1px solid var(--fourth-color);
+#vesrions .row .col-md-2:nth-child(2) {
+    border-color: var(--fourth-color) !important;
 }
 
+
+@media (max-width: 768px) {
+    #vesrions .mobile-ver,
+#vesrions .vr-ver,
+#vesrions .desktop-ver {
+    flex-wrap: wrap;
+}
+}
 /* End Vesrions */
 /* Start Footer */
 footer{
     background-color: #fff;
     padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) / 2);
 }
-footer ul.social-media{
+footer .top-footer {
+    padding-bottom: var(--section-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+footer .top-footer ul.social-media{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+footer .bottom-footer {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-top: 1px solid var(--fourth-color);
+}
+footer .bottom-footer .privacy-page ul{
     list-style: none;
     display: flex;
     align-items: center;
     gap: 15px;
+    justify-content: center;
+}   
+footer .bottom-footer .privacy-page ul li a{
+    color: var(--fourth-color-75);
+}
+footer .bottom-footer .copyright{
+    font-weight: 400;
+    color: var(--fourth-color-75);
+}
+@media (max-width: 991px) {
+    footer .top-footer,
+    footer .bottom-footer{
+        justify-content: center;
+    }
+    footer .bottom-footer{
+        padding-bottom: 100px;
+    }
 }
 /* End Footer */
 /* Start Sign In Page */
-#sign-page {
-    padding-top: var(--section-padding);
+#sign-page,
+#login-page {
+    padding-top: calc(var(--section-padding) * 2);
     padding-bottom: var(--section-padding);
-    background-image: url(../image/login-bg.png);
+    background-image: url(../img/login-bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -288,49 +329,83 @@ footer ul.social-media{
     max-width: 550px;
 }
 
-#sign-page .sign-box .content {
+#sign-page .sign-box .content,
+#login-page .login-box .content {
     border-radius: 40px;
     padding: 40px;
 }
 
-#sign-page .sign-box .content form input {
+#sign-page .sign-box .content form input,
+#login-page .login-box .content form input {
     width: 100%;
-    background-color: #fff;
-    border-radius: 12px;
+    background-color: transparent;
     border: none;
     outline: 0;
+}
+#sign-page .sign-box .content form .form-group > div,
+#login-page .login-box .content form .form-group > div {
+    box-shadow: 0px 2px 12px rgba(44, 44, 44, 0.08);
 }
 
 #sign-page .sign-box .content form input:focus {
     outline: 0;
 }
 
-#sign-page .sign-box .content form input::placeholder {
+#sign-page .sign-box .content form input::placeholder,
+#login-page .login-box .content form input::placeholder {
     color: var(--basic-dark-50);
     text-align: right;
 }
 
-#sign-page .sign-box .content .pass-input {
+#sign-page .sign-box .content .pass-input,
+#login-page .login-box .content .pass-input {
+    box-shadow: 0px 2px 12px rgba(44, 44, 44, 0.08);
     display: flex;
     align-items: center;
     gap: 5px;
-    background-color: #fff;
-    border-radius: 12px;
+    background-color: var(--basic-light-75);
 }
 
-#sign-page .sign-box .content .pass-input .pass-icon {
+#sign-page .sign-box .content .pass-input .pass-icon,
+#login-page .login-box .content .pass-input .pass-icon {
     cursor: pointer;
     user-select: none;
     transition: all .5s ease-out;
 }
 
-#sign-page .sign-box .content .pass-input input {
+#sign-page .sign-box .content .pass-input input,
+#login-page .login-box .content .pass-input input {
     border: none;
     outline: 0;
     flex: 1 1 0;
 }
 
-/* End Sign In Page */
+/* End SignIn Page */
+/* Start Login Page */
+#login-page .login-box {
+    margin: auto;
+    background-color: #FEFEFE1F;
+    border-radius: 40px;
+    border: 1px solid var(--third-color);
+    max-width: 800px;
+}
+#login-page .login-box .iti {
+    display: flex;
+    position: relative;
+}
+#login-page .login-box .iti .iti__selected-flag{
+    gap: 5px;
+}
+#login-page .login-box .iti .iti__arrow{
+    background-image: url(../img/BackArrow_Icon_UIA.svg);
+    border-width: 0;
+    width: 22px;
+    height: 22px;
+}
+#login-page .login-box .iti .iti__flag-container{
+    position: relative;
+}
+/* End Login Page */
 /* Start Animation KeyFrames */
 @keyframes sticky {
     0% {
