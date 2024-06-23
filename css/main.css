@@ -647,6 +647,65 @@ footer .bottom-footer .copyright {
 }
 
 /* End Vesrions Section:Home-Page */
+/* Start About Section:Home-Page */
+#about-section{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+#about-section .about-content{
+    padding-top: calc(var(--section-padding) * 2);
+    padding-bottom: calc(var(--section-padding) * 2);
+    position: relative;
+    background-image: url(../img/hero-home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#about-section .about-content .container{
+    position: relative;
+}
+#about-section .about-content .container .image {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: 0px auto;
+}
+#about-section .about-content .container .image::after,
+#about-section .about-content .container .image::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+}
+#about-section .about-content .container .image::before{
+    border: 1px solid var(--primary-color);
+    transform: rotate(85deg);
+}
+#about-section .about-content .container .image::after{
+    border: 1px solid var(--basic-light);
+    transform: rotate(95deg);
+}
+#about-section .about-content .container .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+@media (max-width: 1199px) {
+    #about-section .about-content .container .image {
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 420px) {
+    #about-section .about-content .container .image {
+        width: 250px;
+        height: 250px;
+    }
+}
+/* End About Section:Home-Page */
 /* Start Animation KeyFrames */
 @keyframes sticky {
     0% {
