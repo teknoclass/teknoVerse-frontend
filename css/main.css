@@ -55,6 +55,10 @@ body {
     color: var(--basic-dark-50);
 }
 
+.text-color-dark-75 {
+    color: var(--basic-dark-75);
+}
+
 /* End Color */
 /* Start Background */
 .basic-light-75 {
@@ -239,8 +243,9 @@ header nav ul.navbar-nav .nav-item .nav-link {
     color: var(--basic-dark);
     text-align: center;
 }
+
 header nav ul.navbar-nav .nav-item .nav-link.active::after,
-header nav ul.navbar-nav .nav-item .nav-link.active::before{
+header nav ul.navbar-nav .nav-item .nav-link.active::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -250,16 +255,18 @@ header nav ul.navbar-nav .nav-item .nav-link.active::before{
     background-repeat: no-repeat;
     background-size: contain;
 }
-header nav ul.navbar-nav .nav-item .nav-link.active::before{
+
+header nav ul.navbar-nav .nav-item .nav-link.active::before {
     right: -20px;
     background-image: url(../img/header-link-arrow-right.svg);
 }
 
-header nav ul.navbar-nav .nav-item .nav-link.active::after{
+header nav ul.navbar-nav .nav-item .nav-link.active::after {
     left: -15px;
     background-image: url(../img/header-link-arrow-left.svg);
 
 }
+
 header nav .sign-btn,
 #sign-page .sign-box .sign-btn {
     box-shadow: 0px 5px 0px var(--primary-color);
@@ -293,11 +300,20 @@ header nav .sign-btn:hover,
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
-#vesrions .row .col-md-2:nth-child(2) {
-    border-color: var(--fourth-color) !important;
+@media (min-width: 992px) {
+    #vesrions .row .col-md-2:nth-child(2),
+    #vesrions-section .row .col-md-2:nth-child(2) {
+        border-color: var(--fourth-color) !important;
+    }
+}
+@media (max-width: 991px) {
+    #vesrions .row .col-md-2:nth-child(2),
+    #vesrions-section .row .col-md-2:nth-child(2) {
+        border-color: transparent !important;
+    }
 }
 
 
@@ -493,7 +509,8 @@ footer .bottom-footer .copyright {
     position: relative;
     overflow: hidden;
 }
-#hero-section .hero-content .bg-effect-m{
+
+#hero-section .hero-content .bg-effect-m {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -578,9 +595,11 @@ footer .bottom-footer .copyright {
         padding-top: var(--section-padding);
         justify-content: flex-end;
     }
-    #hero-section .hero-content .container .text{
+
+    #hero-section .hero-content .container .text {
         text-align: center;
     }
+
     #hero-section .hero-content .container .image {
         margin: 0px auto;
         max-height: 400px;
@@ -588,6 +607,46 @@ footer .bottom-footer .copyright {
 }
 
 /* End Hero Section:Home-Page */
+/* Start Vesrions Section:Home-Page */
+#vesrions-section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+#vesrions-section .desktop-ver,
+#vesrions-section .vr-ver,
+#vesrions-section .mobile-ver {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#vesrions-section .desktop-ver a img,
+#vesrions-section .vr-ver a img,
+#vesrions-section .mobile-ver a img {
+    margin: auto;
+}
+
+#vesrions-section .text p {
+    max-width: 750px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+#vesrions-section .image {
+    text-align: center;
+    margin-top: var(--section-padding);
+    margin: 45px auto;
+}
+
+#vesrions-section .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* End Vesrions Section:Home-Page */
 /* Start Animation KeyFrames */
 @keyframes sticky {
     0% {
