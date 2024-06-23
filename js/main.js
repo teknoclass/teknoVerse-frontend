@@ -39,4 +39,6 @@ function showPassword(iconElement) {
     }
 }
 // Input Tel Iniz
-window.intlTelInput(document.querySelector('#phone'), {});
+if (document.querySelector('#phone')) {
+    window.intlTelInput(document.querySelector('#phone'), {});
+}
