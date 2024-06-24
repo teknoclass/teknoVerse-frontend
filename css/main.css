@@ -197,7 +197,7 @@ body {
 
 .primary-btn-fill:hover {
     color: var(--primary-color);
-    background-color: transparent;
+    background-color: var(--fourth-color);
 }
 
 .basic-light-btn:hover {
@@ -407,8 +407,9 @@ footer .bottom-footer .copyright {
     min-height: 70dvh;
     position: relative;
 }
+
 #sign-page::before,
-#login-page::before{
+#login-page::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -669,15 +670,18 @@ footer .bottom-footer .copyright {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
+
 #app-rooms .content,
+#contact-section .content,
 #about-section .about-content {
     padding-top: calc(var(--section-padding) * 2);
     padding-bottom: calc(var(--section-padding) * 2);
     position: relative;
-    background-image: linear-gradient(180deg, var(--fourth-color) 300px, var(--primary-color));
+    background-image: linear-gradient(180deg, #00246b 400px, var(--primary-color));
 }
+
 #app-rooms .content::before,
-#about-section .about-content::before{
+#about-section .about-content::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -694,6 +698,7 @@ footer .bottom-footer .copyright {
 #about-section .about-content .info .primary-btn-fill {
     border: 1px solid var(--second-color);
 }
+
 #app-rooms .content .container,
 #about-section .about-content .container {
     position: relative;
@@ -748,6 +753,13 @@ footer .bottom-footer .copyright {
     }
 }
 
+@media (max-width: 290px) {
+    #about-section .about-content .container .image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 /* End About Section:Home-Page */
 /* Start App Users Section:Home-Page */
 #app-users {
@@ -783,6 +795,7 @@ footer .bottom-footer .copyright {
 #app-users .content .images-users .row div:nth-child(odd) .image {
     background: linear-gradient(180deg, rgb(11 231 247 / 30%) 0%, rgba(246, 77, 209, 0.75) 100%);
 }
+
 #app-users .content .images-users .row div:nth-child(even) .image {
     background: linear-gradient(0deg, rgb(11 231 247 / 30%) 0%, rgba(246, 77, 209, 0.75) 100%);
 }
@@ -793,30 +806,35 @@ footer .bottom-footer .copyright {
     object-fit: cover;
     object-position: center;
 }
+
 /* End App Users Section:Home-Page */
 /* Start App Rooms Section:Home-Page */
 #app-rooms {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
-#app-rooms  .content .container .text p {
+
+#app-rooms .content .container .text p {
     max-width: 600px;
     line-height: 1.9;
     margin: 25px auto 35px;
 }
-#app-rooms  .content .container .image{
+
+#app-rooms .content .container .image {
     margin: auto;
     text-align: center;
     position: relative;
     z-index: 5;
 }
-#app-rooms  .content .container .image img{
+
+#app-rooms .content .container .image img {
     width: 100%;
     height: auto;
     position: relative;
 }
-#app-rooms  .content .container .image::before,
-#app-rooms  .content .container .image::after{
+
+#app-rooms .content .container .image::before,
+#app-rooms .content .container .image::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -826,23 +844,129 @@ footer .bottom-footer .copyright {
     top: 0;
     transition: all .5s ease-in-out;
 }
-#app-rooms  .content .container .image::after{
+
+#app-rooms .content .container .image::after {
     border: 1px solid var(--primary-color);
     z-index: -1;
 }
-#app-rooms  .content .container .image::before{
+
+#app-rooms .content .container .image::before {
     border: 1px solid var(--fourth-color);
 }
-#app-rooms  .content .container .image:hover::before{
+
+#app-rooms .content .container .image:hover::before {
     transform: rotate(-9deg);
 }
-#app-rooms  .content .container .image:hover::after{
+
+#app-rooms .content .container .image:hover::after {
     transform: rotate(-5deg);
 }
-#app-rooms  .content .container .image:hover::before{
 
-}
 /* End App Rooms Section:Home-Page */
+/* Start Our Customers Section:Home-Page */
+#our-customers {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+#our-customers .content .text p {
+    line-height: 2;
+    max-width: 650px;
+    margin: 25px auto 35px;
+}
+
+#our-customers .content .our-customers-swiper .image-customer {
+    width: 230px;
+    height: 230px;
+    /* border-radius: 50%; */
+    background-image: url(../img/Mask\ -circle.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#our-customers .content .our-customers-swiper .image-customer .circle-white {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#our-customers .content .our-customers-swiper .image-customer .circle-white img {
+    object-fit: contain;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+
+#our-customers .content .our-customers-swiper .swiper-pagination {
+    position: relative;
+    margin-top: 40px;
+}
+
+#our-customers .content .our-customers-swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+}
+
+#our-customers .content .our-customers-swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background: linear-gradient(180deg, var(--fourth-color) 10px, var(--primary-color));
+}
+
+/* End Our Customers Section:Home-Page */
+/* Start Contant Section:Home-Page */
+#contact-section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+#contact-section .content::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/icon-bg.png);
+    background-repeat: repeat;
+    background-size: 40%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: luminosity;
+    opacity: .1;
+}
+#contact-section .content .container{
+    position: relative;
+}
+#contact-section .content .container form input{
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0px 2px 12px #2C2C2C14;
+    background-color: #FEFEFE1F;
+    direction: rtl;
+    border: 1px solid #FEFEFE0A;
+    color: var(--basic-light-75);
+}
+#contact-section .content .container form input::placeholder{
+    color: var(--basic-light-75);
+    font-weight: normal;
+    text-align: right;
+}
+#contact-section .content .container form input:focus{
+    outline: 0;
+}
+#contact-section .content .container .primary-btn-fill{
+    border: 1px solid var(--second-color);
+}
+
+/* End Contant Section:Home-Page */
 /* Start Animation KeyFrames */
 @keyframes sticky {
     0% {

@@ -42,3 +42,32 @@ function showPassword(iconElement) {
 if (document.querySelector('#phone')) {
     window.intlTelInput(document.querySelector('#phone'), {});
 }
+// Start Our Customers Swiper
+const ourCustomersSwiper = new Swiper(".our-customers-swiper .swiper-container", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    speed: 600,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+        },
+        1024: {
+            slidesPerView: 4,
+        },
+    },
+});
