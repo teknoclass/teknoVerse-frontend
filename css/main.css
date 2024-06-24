@@ -17,7 +17,9 @@
     --basic-light-75: #FEFEFEBF;
     --section-padding: 60px;
 }
-
+ul,li{
+    list-style: none;
+}
 a {
     text-decoration: none;
 }
@@ -695,8 +697,12 @@ footer .bottom-footer .copyright {
 }
 
 
-#about-section .about-content .info .primary-btn-fill {
+#about-section .about-content .info .contact-btn {
     border: 1px solid var(--second-color);
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: var(--basic-light);
+    background-color: var(--primary-color);
 }
 
 #app-rooms .content .container,
@@ -965,8 +971,13 @@ footer .bottom-footer .copyright {
 #contact-section .content .container .primary-btn-fill{
     border: 1px solid var(--second-color);
 }
-
 /* End Contant Section:Home-Page */
+/* Start Pricing Page */
+#pricing{
+    padding-top: calc(var(--section-padding) * 2);
+    padding-bottom: var(--section-padding);
+}
+/* End Pricing Page */
 /* Start Animation KeyFrames */
 @keyframes sticky {
     0% {
