@@ -405,6 +405,19 @@ footer .bottom-footer .copyright {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 70dvh;
+    position: relative;
+}
+#sign-page::before,
+#login-page::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/OBJECTS.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    mix-blend-mode: screen;
 }
 
 #sign-page .sign-box {
@@ -417,6 +430,7 @@ footer .bottom-footer .copyright {
 
 #sign-page .sign-box .content,
 #login-page .login-box .content {
+    position: relative;
     border-radius: 40px;
     padding: 40px;
 }
@@ -655,20 +669,32 @@ footer .bottom-footer .copyright {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
-
+#app-rooms .content,
 #about-section .about-content {
     padding-top: calc(var(--section-padding) * 2);
     padding-bottom: calc(var(--section-padding) * 2);
     position: relative;
-    background-image: url(../img/hero-home.jpg);
+    background-image: linear-gradient(180deg, var(--fourth-color) 300px, var(--primary-color));
+}
+#app-rooms .content::before,
+#about-section .about-content::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/OBJECTS.png);
     background-repeat: no-repeat;
     background-size: cover;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
 }
+
 
 #about-section .about-content .info .primary-btn-fill {
     border: 1px solid var(--second-color);
 }
-
+#app-rooms .content .container,
 #about-section .about-content .container {
     position: relative;
 }
@@ -767,9 +793,56 @@ footer .bottom-footer .copyright {
     object-fit: cover;
     object-position: center;
 }
-
-
 /* End App Users Section:Home-Page */
+/* Start App Rooms Section:Home-Page */
+#app-rooms {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+#app-rooms  .content .container .text p {
+    max-width: 600px;
+    line-height: 1.9;
+    margin: 25px auto 35px;
+}
+#app-rooms  .content .container .image{
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+#app-rooms  .content .container .image img{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+#app-rooms  .content .container .image::before,
+#app-rooms  .content .container .image::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    left: 0;
+    top: 0;
+    transition: all .5s ease-in-out;
+}
+#app-rooms  .content .container .image::after{
+    border: 1px solid var(--primary-color);
+    z-index: -1;
+}
+#app-rooms  .content .container .image::before{
+    border: 1px solid var(--fourth-color);
+}
+#app-rooms  .content .container .image:hover::before{
+    transform: rotate(-9deg);
+}
+#app-rooms  .content .container .image:hover::after{
+    transform: rotate(-5deg);
+}
+#app-rooms  .content .container .image:hover::before{
+
+}
+/* End App Rooms Section:Home-Page */
 /* Start Animation KeyFrames */
 @keyframes sticky {
     0% {
