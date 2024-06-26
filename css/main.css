@@ -1239,8 +1239,8 @@ footer .bottom-footer .copyright {
 
 /* End About Us Page */
 /* Start Pivacy + Terms + Subscrip Pages */
-#privacy-page ,
-#terms-page ,
+#privacy-page,
+#terms-page,
 #subs-page {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -1277,6 +1277,76 @@ footer .bottom-footer .copyright {
 }
 
 /* End Pivacy + Terms + Subscrip Pages */
+/* Start Support page */
+#support-page {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+#support-page .support-hero {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    min-height: 55dvh;
+    background-image: url(../img/support-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+#support-page .support-hero .support-search {
+    background-color: var(--basic-light);
+    padding: 10px;
+    max-width: 650px;
+    margin: auto;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#support-page .support-hero .support-search .search-icon {
+    background: transparent;
+    border: 0;
+}
+
+#support-page .support-hero .support-search input[type="search"] {
+    background: transparent;
+    border: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+#support-page .support-hero .support-search input[type="search"]::placeholder{
+    color: var(--basic-dark-50);
+    font-weight: 600;
+    font-size: 15px;
+}
+#support-page .support-hero .support-search input[type="search"]:focus {
+    outline: 0;
+    border: 0;
+}
+#support-page .faq {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+#support-page .faq .accordion .accordion-item{
+    margin-bottom: 25px;
+    border: 0;
+    border-bottom: 1px solid var(--fourth-color);
+    border-radius: 0px;
+}
+#support-page .faq .accordion .accordion-item .accordion-body{
+    color: var(--basic-dark-50);
+}
+#support-page .faq .accordion-button::after{
+    background-image: url(../img/Plus_Icon_UIA.svg) !important;
+}
+
+/* End Support page */
 /* Start Animation KeyFrames */
 @keyframes sticky {
     0% {
