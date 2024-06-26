@@ -71,3 +71,13 @@ const ourCustomersSwiper = new Swiper(".our-customers-swiper .swiper-container",
         },
     },
 });
+// Start Number Animation On scroll
+// let statsSection = document.querySelector("#stats-section");
+// let supportBoxEle = document.querySelector("#stats-section .stats-content .boxes .support .num");
+// let experBoxEle = document.querySelector("#stats-section .stats-content .boxes .exper .num");
+// let subsBoxEle = document.querySelector("#stats-section .stats-content .boxes .subs .num");
+// if (statsSection) {
+//     if (window.scrollY >= statsSection.offsetTop - 200) {
+        
+//     }
+// }

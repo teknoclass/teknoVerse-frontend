@@ -1124,10 +1124,11 @@ footer .bottom-footer .copyright {
     }
 }
 
-#about-page .about-content{
+#about-page .about-content {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
+
 #about-page .about-content .container .image::after {
     border: 1px solid var(--third-color);
     transform: rotate(95deg);
@@ -1164,48 +1165,45 @@ footer .bottom-footer .copyright {
     border-radius: 16px;
     object-fit: cover;
 }
+
 #stats-section {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
+
 #stats-section .stats-content {
     background-image: url(../img/Background.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#stats-section .stats-content img.bottom-stats-shape,
+#stats-section .stats-content img.top-stats-shape {
     position: relative;
-    padding-top: calc(var(--section-padding) * 2.5);
-    padding-bottom: calc(var(--section-padding) * 2.5);
-}
-#stats-section .stats-content::after,
-#stats-section .stats-content::before{
-    content: "";
-    position: absolute;
+    object-fit: cover;
     width: 100%;
-    height: 120px;
-    background-image: url(../img/bg-Shape.png);
-    background-repeat: no-repeat;
-    background-size:  contain;
+    height: auto;
 }
-#stats-section .stats-content::before{
-    top: 0;
+
+#stats-section .stats-content img.top-stats-shape {
+    top: -3px;
     left: 0;
 }
-#stats-section .stats-content::after{
-    bottom: 0;
+
+#stats-section .stats-content img.bottom-stats-shape {
+    bottom: -3px;
     left: 0;
     transform: rotate(180deg);
 }
-#stats-section .stats-content .boxes{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 25px;
+
+#stats-section .stats-content .boxes {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
-#stats-section .stats-content .boxes .box{
-    width: calc(100% / 3 - 25px);
+
+#stats-section .stats-content .boxes .box {
     background-color: #fff;
-    padding: 25px 40px;
+    padding: 45px 10px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -1214,15 +1212,17 @@ footer .bottom-footer .copyright {
     gap: 15px;
     border-radius: 28px;
 }
-#stats-section .stats-content .boxes .box .num{
+
+#stats-section .stats-content .boxes .box .num {
     background: linear-gradient(142.76deg, #002D84 -8.13%, #0BE7F7 33.05%, #F64DD1 74.24%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-weight: bold;
+    font-weight: 900;
 
 
 }
+
 /* End About Us Page */
 /* Start Animation KeyFrames */
 @keyframes sticky {
