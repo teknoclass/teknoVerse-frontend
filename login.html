@@ -13,13 +13,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
     <!-- Css -->
+    <!-- JQuery -->
+    <link rel="stylesheet" href="./css/jquery.steps.min.css">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
     <!-- Swiper Library -->
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/intlTelInput.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
+    <!-- Phone Library -->
+    <link rel="stylesheet" href="./css/intlTelInput.css">
     <!-- Main Style File -->
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -56,7 +60,7 @@
                                 <a class="nav-link" href="#">تواصل معنا</a>
                             </li>
                         </ul>
-                        <div class="d-flex align-items-center gap-2">
+                        <div class="d-flex align-items-center gap-2 justify-content-center">
                             <a class="lang-link" href="#">
                                 <svg width="30" height="30" viewBox="0 0 41 40" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +98,8 @@
                                     <div class="col-12 col-md-6">
                                         <div class="form-group mb-4">
                                             <div class="basic-light-75 rounded">
-                                                <input class="px-2 py-3" type="text" name="full_name" placeholder="الأسم بالكامل">
+                                                <input class="px-2 py-3" type="text" name="full_name"
+                                                    placeholder="الأسم بالكامل">
                                             </div>
                                         </div>
                                     </div>
@@ -116,27 +121,34 @@
                                     <div class="col-12 col-md-6">
                                         <div class="form-group mb-4">
                                             <div class="basic-light-75 rounded">
-                                                <input class="px-2 py-3" type="tel" id="phone" name="" placeholder="+966 36 190 7859">
+                                                <input class="px-2 py-3" type="tel" id="phone" name=""
+                                                    placeholder="+966 36 190 7859">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="mb-3 pass-input px-2 py-3 rounded basic-light-75">
-                                            <input type="password" name="password" id="password" placeholder="الرقم السري">
+                                            <input type="password" name="password" id="password"
+                                                placeholder="الرقم السري">
                                             <span onclick="showPassword(this)" class="pass-icon">
                                                 <svg width="20" height="20" viewBox="0 0 28 28" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M16.9516 11.0484L11.0483 16.9517C10.29 16.1934 9.8233 15.155 9.8233 14C9.8233 11.69 11.69 9.82336 14 9.82336C15.155 9.82336 16.1933 10.29 16.9516 11.0484Z"
-                                                        stroke="#002D84BF" stroke-linecap="round" stroke-linejoin="round" />
+                                                        stroke="#002D84BF" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
                                                     <path
                                                         d="M20.7901 6.73168C18.7484 5.19168 16.4151 4.35168 14.0001 4.35168C9.88173 4.35168 6.04339 6.77835 3.37173 10.9784C2.32173 12.6234 2.32173 15.3884 3.37173 17.0334C4.2934 18.48 5.36673 19.7284 6.53339 20.7317"
-                                                        stroke="#002D84BF" stroke-linecap="round" stroke-linejoin="round" />
+                                                        stroke="#002D84BF" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
                                                     <path
                                                         d="M9.8233 22.785C11.1533 23.345 12.565 23.6483 14 23.6483C18.1183 23.6483 21.9566 21.2217 24.6283 17.0217C25.6783 15.3767 25.6783 12.6117 24.6283 10.9667C24.2433 10.36 23.8233 9.78835 23.3916 9.25168"
-                                                        stroke="#002D84BF" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M18.095 14.8167C17.7917 16.4617 16.45 17.8033 14.805 18.1067"
-                                                        stroke="#002D84BF" stroke-linecap="round" stroke-linejoin="round" />
+                                                        stroke="#002D84BF" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M18.095 14.8167C17.7917 16.4617 16.45 17.8033 14.805 18.1067"
+                                                        stroke="#002D84BF" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
                                                     <path d="M11.0484 16.9517L2.33337 25.6667" stroke="#002D84BF"
                                                         stroke-linecap="round" stroke-linejoin="round" />
                                                     <path d="M25.6667 2.33331L16.9517 11.0483" stroke="#002D84BF"
@@ -147,21 +159,27 @@
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="mb-3 pass-input px-2 py-3 rounded basic-light-75">
-                                            <input type="password" name="check_password" id="check_password" placeholder="تأكيد الرقم السري">
+                                            <input type="password" name="check_password" id="check_password"
+                                                placeholder="تأكيد الرقم السري">
                                             <span onclick="showPassword(this)" class="pass-icon">
                                                 <svg width="20" height="20" viewBox="0 0 28 28" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M16.9516 11.0484L11.0483 16.9517C10.29 16.1934 9.8233 15.155 9.8233 14C9.8233 11.69 11.69 9.82336 14 9.82336C15.155 9.82336 16.1933 10.29 16.9516 11.0484Z"
-                                                        stroke="#002D84BF" stroke-linecap="round" stroke-linejoin="round" />
+                                                        stroke="#002D84BF" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
                                                     <path
                                                         d="M20.7901 6.73168C18.7484 5.19168 16.4151 4.35168 14.0001 4.35168C9.88173 4.35168 6.04339 6.77835 3.37173 10.9784C2.32173 12.6234 2.32173 15.3884 3.37173 17.0334C4.2934 18.48 5.36673 19.7284 6.53339 20.7317"
-                                                        stroke="#002D84BF" stroke-linecap="round" stroke-linejoin="round" />
+                                                        stroke="#002D84BF" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
                                                     <path
                                                         d="M9.8233 22.785C11.1533 23.345 12.565 23.6483 14 23.6483C18.1183 23.6483 21.9566 21.2217 24.6283 17.0217C25.6783 15.3767 25.6783 12.6117 24.6283 10.9667C24.2433 10.36 23.8233 9.78835 23.3916 9.25168"
-                                                        stroke="#002D84BF" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M18.095 14.8167C17.7917 16.4617 16.45 17.8033 14.805 18.1067"
-                                                        stroke="#002D84BF" stroke-linecap="round" stroke-linejoin="round" />
+                                                        stroke="#002D84BF" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M18.095 14.8167C17.7917 16.4617 16.45 17.8033 14.805 18.1067"
+                                                        stroke="#002D84BF" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
                                                     <path d="M11.0484 16.9517L2.33337 25.6667" stroke="#002D84BF"
                                                         stroke-linecap="round" stroke-linejoin="round" />
                                                     <path d="M25.6667 2.33331L16.9517 11.0483" stroke="#002D84BF"
@@ -172,9 +190,14 @@
                                     </div>
                                 </div>
                             </form>
-                            <a class="text-color-fourth text-start fw-semibold" href="#">هل نسيت الرقم السري؟</a>
+                            <p class="text-color-dark-50 text-center text-md-start">في حالة الضغط علي سجل الآن ستكون
+                                موافق علي
+                                <a class="text-color-dark-75 fw-bold" href="terms.html">الشروط و الأحكام</a>
+                                <a class="text-color-dark-75 fw-bold" href="subscription.html"> و شروط الأشتراك</a>
+                            </p>
                             <button class="fourth-btn d-block w-100 mt-3 sign-btn">سجل الآن</button>
-                            <p class="text-center pt-3 text-color-dark-75">لديك حساب بالفعل؟ <a class="fw-bold text-color-primary" href="sign-in.html">سجل دخول</a></p>
+                            <p class="text-center pt-3 text-color-dark-75">لديك حساب بالفعل؟ <a
+                                    class="fw-bold text-color-primary" href="sign-in.html">سجل دخول</a></p>
                         </div>
                     </div>
                 </div>
@@ -257,10 +280,14 @@
         </footer>
     </div>
     <!-- JS Files -->
+    <!-- JQuery -->
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/jquery.steps.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <!-- Swiper -->
     <script src="./js/swiper.min.js"></script>
-    <!-- Phone Number -->
-    <!-- Bootstrap JS -->
     <script src="./js/intlTelInput.js"></script>
+    <!-- Bootstrap JS -->
     <script src="./js/bootstrap.bundle.min.js"></script>
     <!-- Main Script JS -->
     <script src="./js/main.js"></script>

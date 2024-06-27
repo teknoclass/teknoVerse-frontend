@@ -13,12 +13,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
     <!-- Css -->
+    <!-- JQuery -->
+    <link rel="stylesheet" href="./css/jquery.steps.min.css">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
     <!-- Swiper Library -->
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
+    <!-- Phone Library -->
+    <link rel="stylesheet" href="./css/intlTelInput.css">
     <!-- Main Style File -->
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -55,7 +60,7 @@
                                 <a class="nav-link" href="#">تواصل معنا</a>
                             </li>
                         </ul>
-                        <div class="d-flex align-items-center gap-2">
+                        <div class="d-flex align-items-center gap-2 justify-content-center">
                             <div class="dropdown-center">
                                 <button class="myprofile" data-bs-toggle="dropdown">
                                     <svg width="55" height="58" viewBox="0 0 65 68" fill="none"
@@ -185,8 +190,8 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="text-color-fourth fw-bold text-start border-0 bg-transparent" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
+                        <button type="button" class="text-color-fourth fw-bold text-start border-0 bg-transparent"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             <span>
                                 <svg width="20" height="20" viewBox="0 0 28 29" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -225,7 +230,111 @@
                 </div>
                 <div class="guidance">
                     <div class="container">
-                        
+                        <h2 class="text-center text-color-fourth fw-bold mb-5">الشرح والأسترشاد</h2>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 col-xl-8">
+                                <div class="video">
+                                    <img src="./img/video-image.png" alt="video">
+                                    <a class="btn-play-video" href="https://www.youtube.com/watch?v=i9t8gdaBsTg"
+                                        data-fancybox>
+                                        <svg width="90" height="90" viewBox="0 0 112 112" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="56" cy="56" r="50" fill="#FEFEFE" fill-opacity="0.75" />
+                                            <circle cx="56" cy="56" r="55.5" stroke="#FEFEFE" stroke-opacity="0.5" />
+                                            <path d="M79.9238 81.9234C94.2605 67.5867 94.2605 44.3767 79.9238 30.0767"
+                                                stroke="#002D84" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M28.0767 30.0767C13.7401 44.4133 13.7401 67.6234 28.0767 81.9234"
+                                                stroke="#002D84" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M41.9004 90.5032C45.8237 91.8598 49.8937 92.52 54.0003 92.52C58.107 92.4834 62.177 91.8598 66.1003 90.5032"
+                                                stroke="#002D84" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M41.9004 21.4968C45.8237 20.1402 49.8937 19.48 54.0003 19.48C58.107 19.48 62.177 20.1402 66.1003 21.4968"
+                                                stroke="#002D84" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M42.0469 56.0001V49.8768C42.0469 42.2502 47.4369 39.1334 54.0369 42.9468L59.3535 46.0269L64.6703 49.1067C71.2703 52.9201 71.2703 59.1535 64.6703 62.9669L59.3535 66.0467L54.0369 69.1268C47.4369 72.9402 42.0469 69.8234 42.0469 62.1968V56.0001Z"
+                                                fill="#002D84" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="complaint">
+                    <div class="content">
+                        <div class="container">
+                            <h2 class="text-center text-color-fourth fw-bold mb-4">أرسل شكوتك</h2>
+                            <form action="">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <input class="px-2 py-3" type="email" name="" id=""
+                                                placeholder="البريد الألكتروني">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <input class="px-2 py-3" type="text" name="" id=""
+                                                placeholder="الأسم الأول والثاني">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <input class="px-2 py-3" type="text" name="" id=""
+                                                placeholder="أسم المؤسسة">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <input class="px-2 py-3" type="tel" name="" id=""
+                                                placeholder="رقم الهاتف للتواصل">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <div class="form-group">
+                                            <textarea name="" id="" placeholder="أكتب شكوتك"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="primary-btn-fill w-100">تواصل الآن</button>
+                            </form>
+                            <div class="row text-center">
+                                <div class="col-12">
+                                    <p class="text-center text-color-fourth fw-bold my-4">أو تواصل معنا عبر</p>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <span>
+                                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M3.35294 0.5H8.05882L10.4118 6.38235L7.47059 8.14706C8.73054 10.7018 10.7982 12.7695 13.3529 14.0294L15.1176 11.0882L21 13.4412V18.1471C21 18.7711 20.7521 19.3696 20.3108 19.8108C19.8696 20.2521 19.2711 20.5 18.6471 20.5C14.058 20.2211 9.72959 18.2724 6.47862 15.0214C3.22765 11.7704 1.27888 7.44204 1 2.85294C1 2.2289 1.2479 1.63042 1.68916 1.18916C2.13042 0.747898 2.7289 0.5 3.35294 0.5Z"
+                                                stroke="#002D84" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text-color-fourth">
+                                        00905388346560
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <span>
+                                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.89448 15.2364H3.1052C2.54686 15.2364 2.0114 15.0146 1.6166 14.6198C1.2218 14.225 1 13.6895 1 13.1312V2.6052M1 2.6052C1 2.04686 1.2218 1.5114 1.6166 1.1166C2.0114 0.721797 2.54686 0.5 3.1052 0.5H17.8416C18.3999 0.5 18.9354 0.721797 19.3302 1.1166C19.725 1.5114 19.9468 2.04686 19.9468 2.6052M1 2.6052L10.4734 8.92078L19.9468 2.6052M19.9468 2.6052V6.81559M16.789 18.3942L20.3152 14.9374C20.5314 14.7276 20.7034 14.4766 20.821 14.1992C20.9387 13.9218 20.9995 13.6236 21 13.3223C21.0005 13.021 20.9406 12.7226 20.8239 12.4448C20.7072 12.167 20.536 11.9154 20.3204 11.7049C19.8806 11.2747 19.2901 11.0334 18.6749 11.0322C18.0597 11.031 17.4683 11.2701 17.0268 11.6986L16.7911 11.9302L16.5563 11.6986C16.1165 11.2687 15.5263 11.0276 14.9114 11.0264C14.2964 11.0252 13.7053 11.2641 13.2638 11.6923C13.0475 11.902 12.8754 12.153 12.7577 12.4304C12.64 12.7077 12.579 13.0059 12.5784 13.3072C12.5779 13.6085 12.6376 13.9069 12.7543 14.1847C12.8709 14.4625 13.042 14.7142 13.2575 14.9248L16.789 18.3942Z"
+                                                stroke="#002D84" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text-color-fourth">
+                                        info@awaelkoleji.com
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -309,8 +418,13 @@
         </footer>
     </div>
     <!-- JS Files -->
+    <!-- JQuery -->
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/jquery.steps.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
     <!-- Swiper -->
     <script src="./js/swiper.min.js"></script>
+    <script src="./js/intlTelInput.js"></script>
     <!-- Bootstrap JS -->
     <script src="./js/bootstrap.bundle.min.js"></script>
     <!-- Main Script JS -->

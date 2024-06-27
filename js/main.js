@@ -71,6 +71,20 @@ const ourCustomersSwiper = new Swiper(".our-customers-swiper .swiper-container",
         },
     },
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const url = window.location.pathname;
+    const activePage = url.substring(url.lastIndexOf('/') + 1);
+    const links = document.querySelectorAll('.navbar-nav li.nav-item a.nav-link');
+
+    links.forEach(link => {
+        const linkPage = link.href.substring(link.href.lastIndexOf('/') + 1);
+
+        if (activePage === linkPage) {
+            link.closest("a").classList.add("active");
+        }
+    });
+});
+
 // Start Number Animation On scroll
 // let statsSection = document.querySelector("#stats-section");
 // let supportBoxEle = document.querySelector("#stats-section .stats-content .boxes .support .num");

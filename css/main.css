@@ -32,6 +32,15 @@ body {
     font-family: "Almarai", sans-serif;
 }
 
+input::placeholder {
+    padding-bottom: 5px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 0;
+}
+
 /* Start Color */
 .text-color-primary {
     color: var(--primary-color);
@@ -193,8 +202,9 @@ body {
 .fourth-btn:hover::after,
 .basic-light-btn:hover::before,
 .basic-light-btn:hover::after {
-    height: 510px;
-    width: 510px;
+    left: 50%;
+    height: 650px;
+    width: 100%;
 }
 
 .primary-btn:hover {
@@ -219,6 +229,7 @@ body {
 
 /* ENd Ready Button */
 /* Start */
+
 .main-wrapper {
     display: flex;
     flex-direction: column;
@@ -274,6 +285,7 @@ header nav ul.navbar-nav .nav-item .nav-link.active::after {
 }
 
 header nav .sign-btn,
+#login-page .login-box .sign-btn,
 #sign-page .sign-box .sign-btn {
     box-shadow: 0px 5px 0px var(--primary-color);
     border-color: transparent;
@@ -291,14 +303,13 @@ header nav .myprofile {
 }
 
 header nav .dropdown-center ul.dropdown-menu {
-    padding: 15px 10px;
     background-color: var(--basic-light-75);
     overflow: hidden;
     font-size: 15px;
     color: var(--basic-dark);
-    min-width: 200px;
-    right: 50%;
-    transform: translateX(50%);
+    /* min-width: 200px; */
+    /* right: 50%; */
+    /* transform: translateX(50%); */
 }
 
 /* End Header */
@@ -1290,6 +1301,7 @@ footer .bottom-footer .copyright {
     background-image: url(../img/support-img.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1320,30 +1332,126 @@ footer .bottom-footer .copyright {
     padding: 10px 0;
 }
 
-#support-page .support-hero .support-search input[type="search"]::placeholder{
+#support-page .support-hero .support-search input[type="search"]::placeholder {
     color: var(--basic-dark-50);
     font-weight: 600;
     font-size: 15px;
 }
+
 #support-page .support-hero .support-search input[type="search"]:focus {
     outline: 0;
     border: 0;
 }
+
 #support-page .faq {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
-#support-page .faq .accordion .accordion-item{
+
+#support-page .faq .accordion .accordion-item {
     margin-bottom: 25px;
     border: 0;
     border-bottom: 1px solid var(--fourth-color);
     border-radius: 0px;
 }
-#support-page .faq .accordion .accordion-item .accordion-body{
+
+#support-page .faq .accordion .accordion-item .accordion-body {
     color: var(--basic-dark-50);
 }
-#support-page .faq .accordion-button::after{
+
+#support-page .faq .accordion-button::after {
     background-image: url(../img/Plus_Icon_UIA.svg) !important;
+}
+
+#support-page .guidance {
+    padding-bottom: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) * 1);
+    margin-bottom: calc(var(--section-padding) * 2);
+}
+
+#support-page .guidance .video {
+    text-align: center;
+    margin: auto;
+    aspect-ratio: 18 / 9;
+    max-width: 800px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+
+    #support-page .guidance .video::before,
+    #support-page .guidance .video::after {
+        content: "";
+        position: absolute;
+        background-image: url(../img/Mask-shape-vid.png);
+        width: 100%;
+        height: calc(100% + 100px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    #support-page .guidance .video::before {
+        left: -25%;
+    }
+
+    #support-page .guidance .video::after {
+        right: -50%;
+    }
+}
+
+#support-page .guidance .video img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+#support-page .guidance .video .btn-play-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#support-page .complaint {
+    padding-bottom: var(--section-padding);
+    padding-top: var(--section-padding);
+}
+
+#support-page .complaint {
+    background-image: linear-gradient(270deg, #93fdf5, #a8cdfb, #af9efe);
+}
+
+#support-page .complaint .content .container form input,
+#support-page .complaint .content form textarea {
+    width: 100%;
+    box-shadow: 0px 2px 12px 0px #2C2C2C14;
+    border: 1px solid #FEFEFE0A;
+    background-color: var(--basic-light-75);
+    border-radius: 12px;
+    direction: rtl;
+}
+
+#support-page .complaint .content form textarea {
+    padding: 16px;
+    height: 150px;
+    resize: none;
+}
+
+#support-page .complaint .content .container form input::placeholder,
+#support-page .complaint .content form textarea::placeholder {
+    color: var(--basic-dark-50);
+}
+
+#support-page .complaint .content button.primary-btn-fill {
+    box-shadow: 0px 4px 2px 0px var(--fourth-color-75);
 }
 
 /* End Support page */
