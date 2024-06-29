@@ -556,7 +556,7 @@ footer .bottom-footer .copyright {
     background-image: url(../img/hero-home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100dvh;
+    height: calc(100dvh + 100px);
     position: relative;
     overflow: hidden;
 }
@@ -643,7 +643,8 @@ footer .bottom-footer .copyright {
     #hero-section .hero-content .container {
         position: relative;
         flex-direction: column;
-        padding-top: var(--section-padding);
+        margin-top: calc(var(--section-padding) * 1);
+        padding-top: calc(var(--section-padding) * 2);
         justify-content: flex-end;
     }
 
@@ -654,6 +655,11 @@ footer .bottom-footer .copyright {
     #hero-section .hero-content .container .image {
         margin: 0px auto;
         max-height: 400px;
+    }
+}
+@media (max-width: 991px) {
+    #hero-section .hero-content {
+        height: calc(100dvh + 140px);
     }
 }
 
@@ -936,6 +942,7 @@ footer .bottom-footer .copyright {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    margin: auto;
 }
 
 #our-customers .content .our-customers-swiper .image-customer .circle-white {

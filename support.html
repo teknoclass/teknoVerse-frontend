@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
     <!-- Css -->
+     <link rel="stylesheet" href="./css/animation.css">
     <!-- JQuery -->
     <link rel="stylesheet" href="./css/jquery.steps.min.css">
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
@@ -233,7 +234,7 @@
                         <h2 class="text-center text-color-fourth fw-bold mb-5">الشرح والأسترشاد</h2>
                         <div class="row justify-content-center">
                             <div class="col-12 col-md-6 col-xl-8">
-                                <div class="video">
+                                <div class="video wow animate__animated animate__bounceIn">
                                     <img src="./img/video-image.png" alt="video">
                                     <a class="btn-play-video" href="https://www.youtube.com/watch?v=i9t8gdaBsTg"
                                         data-fancybox>
@@ -272,36 +273,36 @@
                             <form action="">
                                 <div class="row justify-content-center">
                                     <div class="col-12 col-md-6 mb-4">
-                                        <div class="form-group">
+                                        <div class="form-group wow animate__animated animate__fadeInRightBig" data-wow-delay=".1s">
                                             <input class="px-2 py-3" type="email" name="" id=""
                                                 placeholder="البريد الألكتروني">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-4">
-                                        <div class="form-group">
+                                        <div class="form-group wow animate__animated animate__fadeInLeftBig" data-wow-delay=".2s">
                                             <input class="px-2 py-3" type="text" name="" id=""
                                                 placeholder="الأسم الأول والثاني">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-4">
-                                        <div class="form-group">
+                                        <div class="form-group wow animate__animated animate__fadeInRightBig" data-wow-delay=".4s">
                                             <input class="px-2 py-3" type="text" name="" id=""
                                                 placeholder="أسم المؤسسة">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-4">
-                                        <div class="form-group">
+                                        <div class="form-group wow animate__animated animate__fadeInLeftBig" data-wow-delay=".6s">
                                             <input class="px-2 py-3" type="tel" name="" id=""
                                                 placeholder="رقم الهاتف للتواصل">
                                         </div>
                                     </div>
                                     <div class="col-12 mb-4">
-                                        <div class="form-group">
+                                        <div class="form-group wow animate__animated animate__fadeInUpBig" data-wow-delay=".8s">
                                             <textarea name="" id="" placeholder="أكتب شكوتك"></textarea>
                                         </div>
                                     </div>
                                 </div>
-                                <button class="primary-btn-fill w-100">تواصل الآن</button>
+                                <button class="primary-btn-fill w-100 wow animate__animated animate__fadeInUpBig" data-wow-delay="1s">تواصل الآن</button>
                             </form>
                             <div class="row text-center">
                                 <div class="col-12">
@@ -418,6 +419,7 @@
         </footer>
     </div>
     <!-- JS Files -->
+     <script src="./js/wow.js"></script>
     <!-- JQuery -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>

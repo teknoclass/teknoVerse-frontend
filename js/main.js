@@ -6,6 +6,7 @@
 //         document.querySelector('header.main-header').classList.add('sticky');
 //     }
 // };
+new WOW().init();
 // Password Show Toggle
 function showPassword(iconElement) {
     const passInput = iconElement.previousElementSibling;
